@@ -5,334 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MakeMyTrip - #1 Travel Website</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Google fonts CDN link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <style>
-        .background {
-            background: rgb(230, 229, 228);
-            background-repeat: no-repeat;
-            background-image: linear-gradient(to bottom, rgb(24, 22, 22), rgb(12, 12, 173));
-            background-size: 100% 500px;
-            display: flex;
-            justify-content: center;
-            font-family: lato;
-            color: rgb(97, 94, 94);
-        }
-
-        .container {
-            width: 1200px;
-        }
-
-        .data {
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-
-        .categories {
-            background-color: white;
-            width: 950px;
-            margin-top: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 1px 15px 1px #7a7a7a;
-            display: flex;
-            justify-content: space-evenly;
-            z-index: 2;
-        }
-
-        .categories span {
-            font-size: 14px;
-            padding: 15px;
-            padding-top: 20px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .fa-solid {
-            font-size: 25px;
-        }
-
-        .fa-sharp {
-            font-size: 25px;
-        }
-
-        .booking {
-            background-color: white;
-            width: 1200px;
-            height: 300px;
-            position: absolute;
-            top: 70px;
-            border-radius: 10px;
-            z-index: 1;
-            padding: 20px;
-        }
-
-        .ticket {
-            margin-top: 50px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        .ticket span {
-            padding: 5px;
-        }
-
-        .active-ticket {
-            background-color: rgb(194, 194, 194);
-            border-radius: 15px;
-            color: rgb(51, 51, 51);
-        }
-
-        .ticket span i {
-            font-size: 15px;
-        }
-
-        .ticket-booking {
-            border: 1px solid rgb(165, 165, 165);
-            margin-top: 15px;
-            display: flex;
-            border-radius: 10px;
-        }
-
-        .flight {
-            margin: 15px;
-            color: rgb(46, 45, 45);
-            width: 300px;
-            border-right: 1px solid rgb(165, 165, 165);
-        }
-
-        .flight h1 {
-            margin: 0;
-        }
-
-        .fare-search {
-            margin-top: 50px;
-            display: flex;
-        }
-
-        .fare-select {
-            width: 80px;
-            display: flex;
-        }
-
-        .active-fare i {
-            color: rgb(106, 106, 241);
-        }
-
-        .fare-type span {
-            color: rgb(39, 38, 38);
-        }
-
-        .search-btn {
-            width: 230px;
-            height: 45px;
-            /* background-color: rgb(106, 95, 253); */
-            background-image: linear-gradient(93deg, #53b2fe, #065af3);
-            color: white;
-            /* text-align: center; */
-            font-size: 26px;
-            font-weight: 900;
-            border-radius: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* Below code written for button possition */
-            position: absolute;
-            bottom: -7%;
-            left: 40%;
-        }
-
-        .news {
-            position: absolute;
-            bottom: 100px;
-            width: 1200px;
-
-        }
-
-        .news-card {
-            width: 390px;
-            height: 100px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgb(104, 104, 104);
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .news-icon i {
-            font-size: 38px;
-        }
-
-        .news-text {
-            width: 200px;
-        }
-
-        .Blue-color-text {
-            color: rgb(90, 90, 207);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- Fontawesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Project1</title>
 </head>
 
-<body class="background">
-    <div class="container">
-        <img src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt="MakeMyTrip" width="113"
-            height="36">
-        <div class="data">
-            <div class="categories">
-                <span><i class="fa-sharp fa-solid fa-plane-departure"></i>Flights</span>
-                <span><i class="fa-solid fa-hotel"></i>Hotels</span>
-                <span><i class="fa-solid fa-house"></i>Homestays</span>
-                <span><i class="fa-solid fa-cloud"></i></i>Holiday Packages</span>
-                <span><i class="fa-solid fa-train"></i>Trains</span>
-                <span><i class="fa-solid fa-bus"></i>Buses</span>
-                <span><i class="fa-sharp fa-solid fa-taxi"></i>Cabs</span>
-                <span><i class="fa-solid fa-wallet"></i></i>Forex</span>
-                <span><i class="fa-solid fa-plane"></i>Charter Flights</span>
-                <span><i class="fa-solid fa-person-hiking"></i>Activities</span>
+<body>
+    <!-- Start -->
+    <!-- Header -->
+    <header>
+        <nav>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#"><img src="./assets/SA logo fl.png" alt="Logo" width="100px"></a>
             </div>
-            <div class="booking">
-                <div class="ticket">
-                    <span class="active-ticket"><i class="fa-sharp fa-solid fa-circle-check"></i>ONEWAY</span>
-                    <span> <input type="radio" /> ROUND TRIP</span>
-                    <span> <input type="radio" /> MULTI CITY</span>
-                </div>
-                <div class="ticket-booking">
-                    <div class="flight">
-                        <span>FROM</span>
-                        <h1>Delhi</h1>
-                        <span>DEL, Delhi Airport India</span>
-                    </div>
-                    <div class="flight">
-                        <span>TO</span>
-                        <h1>Bengaluru</h1>
-                        <span>BLR, Bengaluru International Airport...</span>
-                    </div>
-                </div>
-                <div class="fare-search">
-                    <span class="fare-select">Select A Fare Type:</span>
-                    <div class="fare-type">
-                        <span class="active-fare"><i class="fa-sharp fa-solid fa-circle-check"></i>Regular Fares</span>
-                        <span> <input type="radio" /> Armed Forces Fares</span>
-                        <span> <input type="radio" /> Student Fares</span>
-                        <span> <input type="radio" /> Senior Citizen Fares</span>
-                        <span> <input type="radio" /> Coctors & Nurses Fares</span>
-                        <span> <input type="radio" /> Double Seat Fares</span>
-                    </div>
-                </div>
-                <div class="search-btn">SEARCH</div>
+            <!-- Navigation -->
+            <div class="navbar">
+                <ul>
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>About</li>
+                    <li><a href="#"></a>Project</li>
+                    <li><a href="#"></a>Contact</li>
+                </ul>
+            </div>
+            <!-- Search and button -->
+            <div class="search-field">
+                <input type="text" placeholder="Searching for something" />
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero section -->
+    <section class="hero-section">
+        <!-- Left hero section -->
+        <div class="hero-left-section">
+            <h1>Hello, I am a <span>Web Developer</span></h1>
+            <p>
+                I am an aspiring <span>Full Stack JavaScript Developer</span>,
+                <br />
+                who is currently working as a <span>Freelancer</span>
+                <br /> 
+                for <span>National and International Client</span>.
+            </p>
+        </div>
+        <!-- Right hero section -->
+        <div class="hero-right-section">
+            <a href="#"><img src="./assets/profile pic.jpg" alt="Profile Picture" width="200px"></a>
+            <div class="hero-right-section-btn">
+                <button>Chat With Me</button>
             </div>
         </div>
-        <div class="news">
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-plane-departure"></i></div>
-                            <div class="news-text">
-                                <b>International Flights Now Open!</b>
-                                Call 0124-4628747 for booking assistance
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-language"></i></i></div>
-                            <div class="news-text">
-                                We are now available in हिंदी!
-                                <br>
-                                <span class="Blue-color-text">Click here to change language</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-plane-departure"></i></div>
-                            <div class="news-text">
-                                Flight booking impacted due to COVID-19?
-                                <br>
-                                <span class="Blue-color-text">Check refund status here</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-plane-departure"></i></div>
-                            <div class="news-text">
-                                Check international destinations open for Indians here, with their guidelines
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-plane"></i></div>
-                            <div class="news-text">
-                                Taking a domestic flight?
-                                <br>
-                                <span class="Blue-color-text">Click to check travel guidelines</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-credit-card"></i></div>
-                            <div class="news-text">
-                                Wondering how to use credit vouchers issued by airlines?
-                                <span class="Blue-color-text">Click for detailed instructions</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-mask-face"></i></div>
-                            <div class="news-text">
-                                States across India have different quarantine rules.
-                                <span class="Blue-color-text">Click to know more</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-card">
-                            <div class="news-icon"><i class="fa-solid fa-laptop"></i></div>
-                            <div class="news-text">
-                                Complete your web check-in on MakeMyTrip in easy steps.
-                                <span class="Blue-color-text">Click to know more</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <p>Copyright &copy; 2023 Logo | All right reserved.</p>
         </div>
-    </div>
-    <!--Script link given below-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        new Swiper(".swiper", {
-            direction: "horizontal",
-            loop: false,
-
-            slidesPerView: 3,
-            spaceBetween: 25,
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+            <ul>
+                <li><i class="fa-brands fa-github"></i></li>
+                <li><i class="fa-brands fa-linkedin"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+            </ul>
+    </footer>
 </body>
 
 </html>
